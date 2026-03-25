@@ -14,7 +14,7 @@ export default function About() {
         </h2>
 
         <p className="mt-6 text-zinc-300 leading-relaxed">
-          Soy desarrollador full stack con foco en JavaScript y React. Me gusta escribir código
+          Soy desarrollador full stack con especialidad en JavaScript y React. Me gusta escribir código
           claro, mantener las cosas simples y construir productos que funcionen de verdad.
         </p>
 
@@ -31,7 +31,7 @@ export default function About() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl p-8"
       >
-        <p className="text-xs tracking-[0.35em] text-zinc-400">FOCO</p>
+        <p className="text-xs tracking-[0.35em] text-zinc-400">ESPECIALIDADES</p>
 
         <div className="mt-5 space-y-3 text-zinc-200">
           <div className="flex gap-3">
