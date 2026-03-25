@@ -1,9 +1,27 @@
 import { motion } from "framer-motion";
 
 const projects = [
-  { name: "Umbrelland Group", desc: "Gestor e inmobiliaria. UI clara + lógica sólida.", stack: "JavaScript · DOM · CSS" },
-  { name: "Grupo Gioca | Internet", desc: "Servicio de Internet. Landing page", stack: "React · Hooks · Router" },
-  { name: "Company PetShop Belgrano", desc: "Tienda online para mascotas", stack: "JavaScript · Node · Express" },
+  {
+    name: "Umbrelland Group",
+    desc: "Gestor e inmobiliaria. UI clara + lógica sólida.",
+    stack: "JavaScript · DOM · CSS",
+    demo: "https://umbrelland-group.vercel.app/",
+    repo: null,
+  },
+  {
+    name: "Grupo Gioca | Internet",
+    desc: "Servicio de Internet. Landing page",
+    stack: "React · Hooks · Router",
+    demo: "https://www.gioca.com.ar",
+    repo: null,
+  },
+  {
+    name: "MC · CV",
+    desc: "Portfolio personal. SPA con animaciones y deploy en Vercel.",
+    stack: "React · Tailwind · Framer Motion · Vite",
+    demo: "https://cv-onepage-woad.vercel.app/",
+    repo: "https://github.com/caslamarcos/Cv-onepage",
+  },
 ];
 
 export default function Projects() {
@@ -39,12 +57,33 @@ export default function Projects() {
             <p className="mt-4 text-sm text-zinc-400">{p.stack}</p>
 
             <div className="mt-6 flex gap-3">
-              <button className="rounded-xl bg-white/5 px-4 py-2 text-sm text-zinc-200 hover:bg-white/10 transition">
-                Demo
-              </button>
-              <button className="rounded-xl bg-blue-600/20 px-4 py-2 text-sm text-blue-200 hover:bg-blue-600/30 transition border border-blue-500/20">
-                Repo
-              </button>
+              {p.demo ? (
+                <a href={p.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-xl bg-white/5 px-4 py-2 text-sm text-zinc-200 hover:bg-white/10 transition"
+                >
+                  Demo
+                </a>
+              ) : (
+                <span className="rounded-xl bg-white/5 px-4 py-2 text-sm text-zinc-500 cursor-not-allowed">
+                  Sin demo
+                </span>
+              )}
+
+              {p.repo ? (
+                <a href={p.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-xl bg-blue-600/20 px-4 py-2 text-sm text-blue-200 hover:bg-blue-600/30 transition border border-blue-500/20"
+                >
+                  Repo
+                </a>
+              ) : (
+                <span className="rounded-xl bg-blue-600/10 px-4 py-2 text-sm text-zinc-500 cursor-not-allowed border border-blue-500/10">
+                  Sin repo
+                </span>
+              )}
             </div>
           </motion.div>
         ))}
