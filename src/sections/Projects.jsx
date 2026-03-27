@@ -1,19 +1,19 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 
 const projects = [
   {
     name: "Umbrelland Group",
-    desc: "Gestor e inmobiliaria. UI clara + lógica sólida.",
+    desc: "Landing informativa para inmobiliaria. Diseno limpio, seccion de contacto y deploy en produccion.",
     stack: "JavaScript · DOM · CSS",
     demo: "https://umbrelland-group.vercel.app/",
     repo: null,
   },
   {
     name: "Grupo Gioca | Internet",
-    desc: "Servicio de Internet. Landing page",
-    stack: "React · Hooks · Router",
-    demo: "https://www.gioca.com.ar",
-    repo: null,
+    desc: "Landing para empresa de internet. Fibra optica en barrios populares de Buenos Aires.",
+    stack: "React · Tailwind · Framer Motion · Vite",
+    demo: "https://grupo-gioca.vercel.app/",
+    repo: "https://github.com/caslamarcos/grupoGioca",
   },
   {
     name: "MC · CV",
@@ -37,7 +37,7 @@ export default function Projects() {
           Proyectos <span className="text-blue-500">reales</span>
         </h2>
         <p className="mt-4 text-zinc-400 max-w-2xl">
-          Pocos, bien hechos. Con estructura, lógica y UI limpia.
+          Pocos, bien hechos. Con estructura, logica y UI limpia.
         </p>
       </motion.div>
 
@@ -58,11 +58,7 @@ export default function Projects() {
 
             <div className="mt-6 flex gap-3">
               {p.demo ? (
-                <a href={p.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-xl bg-white/5 px-4 py-2 text-sm text-zinc-200 hover:bg-white/10 transition"
-                >
+                <a href={p.demo} target="_blank" rel="noreferrer" className="rounded-xl bg-white/5 px-4 py-2 text-sm text-zinc-200 hover:bg-white/10 transition">
                   Demo
                 </a>
               ) : (
@@ -72,11 +68,7 @@ export default function Projects() {
               )}
 
               {p.repo ? (
-                <a href={p.repo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-xl bg-blue-600/20 px-4 py-2 text-sm text-blue-200 hover:bg-blue-600/30 transition border border-blue-500/20"
-                >
+                <a href={p.repo} target="_blank" rel="noreferrer" className="rounded-xl bg-blue-600/20 px-4 py-2 text-sm text-blue-200 hover:bg-blue-600/30 transition border border-blue-500/20">
                   Repo
                 </a>
               ) : (
